@@ -9,14 +9,17 @@ body{
  
 }
 img{
-  width:300px;
+  width:250px;
   height:300px;
-  object-fit: contain;
+  object-fit: ;
+  margin: auto;
+  /* border-radius: 100%; */
+  /* border: red solid 2px; */
 } 
 
 h2{
 margin: auto;
-color:white;
+color:red;
 text-align: center;
 }
 #vanity{
@@ -40,11 +43,14 @@ text-align: center;
   align-items: center; 
   justify-content: center;
   margin: auto;
-  height: 40em;
-  width: 70em;
-  border: 2px solid rgb(136, 249, 105);
+  padding:1em 1em 1em 1em ;
+  height: 50em;
+  width: 80em;
+ 
   perspective: 1000px;
-  background-color: rgba(189, 29, 98, 0.461);
+  background-color: rgba(189, 29, 98, 0.248);
+
+  
 }
 /* .card{
   position: relative; 

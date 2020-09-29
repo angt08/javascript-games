@@ -67,13 +67,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (optionOneId == optionTwoId) {
       cards[optionOneId].setAttribute('src','images/darkflower.jpeg')
       cards[optionTwoId].setAttribute('src','images/darkflower.jpeg')
-      alert ('these are the same image')
+      // alert ('these are the same image')
     }
     else if (chosenCards[0] === chosenCards[1]) {
-      alert('a match!')
+      // alert('a match!')
       // set an attribute for when the cards match so the image changes 
-      cards[optionOneId].setAttribute('src','images/brain.jpg')
-      cards[optionTwoId].setAttribute('src','images/brain.jpg')
+      // cards[optionOneId].setAttribute('src','images/brain.jpg')
+      // cards[optionTwoId].setAttribute('src','images/brain.jpg')
       cards[optionOneId].removeEventListener('click', flipCard)
       cards[optionTwoId].removeEventListener('click', flipCard)
       cardsMatched.push(chosenCards)
