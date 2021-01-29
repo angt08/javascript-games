@@ -2,46 +2,115 @@
   padding:0;
   margin:0;
   box-sizing: border-box;
-}
-body{
-  height: 100vh;
-  /* background-color: black; */
+  scroll-behavior: smooth;
  
 }
-img{
-  width:250px;
-  height:300px;
-  object-fit: ;
-  margin: auto;
 
+header{
+  top:0;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height:3em;
+  background: rgba(0, 0, 0, 0.255);
+}
+
+a{
+  font-size: 2em;
+  font-family: 'Alatsi', sans-serif;
+  text-decoration: none;
+  color:white;
+}
+
+img{
+ 
+  object-fit: cover;
+  margin: auto; 
+  height:12rem;
+	width: 10rem;
 
   border-radius: 50%;
-  background: #ffee10;
+  background: #000000;
+
+
   transition: .5s;
-  /* transform: scale(.9); */
- 
-
-
-
-
+  transform: scale(.9);
   -webkit-box-shadow: 1px 8px 12px -4px rgba(186,186,152,1);
 -moz-box-shadow: 1px 8px 12px -4px rgba(186,186,152,1);
 box-shadow: 1px 8px 12px -4px rgba(186,186,152,1);
 } 
 
+
+
 img:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #ffee10;
+  box-shadow: 0 0 30px #ffee10;
 }
 
 img:hover {
   color: #ffee10;
-  box-shadow: 0 0 5px #ffee10;
-  text-shadow: 0 0 5px #ffee10;
+  box-shadow: 0 0 10px #ffee10;
+  text-shadow: 0 0 10px #ffee10;
 }
 
 
 
+h2{
+  position: relative;
+  margin: auto;
+  font-size: 2em;
+  font-weight: bold;
+  color:rgb(227, 223, 226);
+  font-family: sans-serif;
+  text-shadow: 1px 1px 2px rgb(67, 19, 55);
+}
+
+#entrance{
+  top:0;
+  padding-top: 10em;
+  /* position: absolute; */
+  width: 100%;
+  height: 150vh;
+  background-image: url(/images/tvvintage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#vanity{
+  top:0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/images/oldvanity.jpg);
+  background-size: cover;
+  background-attachment:fixed ;
+  background-repeat: no-repeat;
+  z-index: -1;
+  
+}
+.game-wrapper{
+  width: 100%;
+  padding:2em 2em 2em 2em ;
+  margin-top: 8rem;
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+ 
+}
+.board {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 3em;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: rgba(189, 29, 98, 0.248);
+  animation: fadeIn 2s;
+  
+}
 
 
 
@@ -80,66 +149,4 @@ img:hover {
   0% {opacity: 0;}
   100% {opacity: 1;}
   } 
-
-
-
 /*       */
-
-h2{
-margin: auto;
-color:rgb(206, 56, 169);
-text-align: left;
-margin-left: 10%;
-font-family: 'Sorts Mill Goudy', serif;
-text-shadow: 1px 1px 2px #000000;
-}
-#entrance{
-
-  top:0;
-  padding-top: 10em;
-  /* position: absolute; */
-  width: 100%;
-  height: 150vh;
-  width: 100%;
-  background-image: url(/images/tvvintage.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#vanity{
-  top:0;
-  padding-top: 10em;
-  /* position: absolute; */
-  width: 100%;
-  height: 150vh;
-  width: 100%;
-  background-image: url(/images/oldvanity.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.board{
-  margin-top: 44%;
-  display: flex;
-  flex-wrap:wrap;
-  flex-direction: row;
-  flex-flow: row wrap;
-  align-items: center; 
-  justify-content: center;
-  margin: auto;
-  padding:1em 1em 1em 1em ;
-  height: 50em;
-  width: 80em;
- 
-  perspective: 1000px;
-  background-color: rgba(189, 29, 98, 0.248);
-
-  animation: fadeIn 2s;
-  border-radius: 2em;
-
-
-}
-
-
- 

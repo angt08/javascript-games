@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let chosenCards = []
   let chosenCardsId = []
   const cardsMatched = []
-
+  let audio = document.getElementById('myAudio');
 
   // here you create the gameboard using the array and set.attribute to set the images on to each card. 
   function createMemoryBoard() {
@@ -52,12 +52,22 @@ document.addEventListener('DOMContentLoaded', () => {
       let card = document.createElement('img')
       card.setAttribute('src', 'images/darkflower.jpeg')
       card.setAttribute('data-id', i)
-      card.addEventListener ('click', flipCard)
+      card.addEventListener('click', flipCard)
+      card.addEventListener('click',playAudio)
       board.appendChild(card)
       // line 55 we're appending the card onto the board 
     }
   }
+// 
+  
 
+function playAudio() { 
+ 
+  audio.play(); 
+} 
+//
+
+  
 //  now we need a function to check for matches and flipping our cards
   function checkForMatch() {
     let cards = document.querySelectorAll('img')
@@ -80,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       cards[optionOneId].setAttribute('src','images/darkflower.jpeg')
       cards[optionTwoId].setAttribute('src','images/darkflower.jpeg')
-      alert ('try once more')
+      // alert ('try once more')
     }
     chosenCards= []
     chosenCardsId = []
@@ -103,9 +113,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   createMemoryBoard()
 })
-
-// document.getElementsByClassName("card").addEventListener("click", function(){
-//   document.getElementsByClassName("card-back").innerHTML = document.getElementsByClassName("card-front");
-// });
-
-// cards.forEach(card => card.addEventListener('click', flipCard));
